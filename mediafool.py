@@ -13,6 +13,7 @@ intents.messages = True
 barndles = 266000735454363649
 slime = 496765197575520270
 
+token = str(os.getenv("TOKEN"))
 
 maps = ["1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "farewell", "cosmic column", "sentient forest", "pumber", "java's crypt", "the tower (XVI)", "starlight station", "mango mesa", "flying battery", "the core problem", "hydroshock", "subway neon", "meaningless contraptions", "golden alleyway", "system.invalidmapexception", "skyline usurper", "clockwork", "plasma reactor", "floating point", "psychokinetic", "ivory", "sex", "solar express", "nelumbo", "heart of the storm", "ultra difficult", "glyph", "flavors of pi", "cryoshock", "chromatic complex", "fractured iridescence", "ngmhs", "7d1d", "mauve", "solaris", "madeline votes in the US presidential election", "ufo nest", "waterbear mountain", "run for freedom", "d1d7", "cpcl", "lxvi", "sapphire dash", "vivid abyss", "avian ascension", "magnetic dawn", "Mature Grape+", "5b garbage version", "cycle madness garbage version", "Darkmoon Ruins", "summit down-side"] 
 
@@ -21,6 +22,7 @@ descriptors = ["good", "made by slime", "made by leviathan", "a collab", "with t
 @bot.event
 async def on_ready():
     print(f"WE'RE LOGGED IN BOYS")
+    os.chdir(r'/home/barndles/Documents/discord-bots/mediafool')
 
 
 @bot.slash_command(name="mapidea", description = "generate a fun new map idea!!!!!!!!")
@@ -43,4 +45,4 @@ async def glue(ctx):
     await ctx.respond("heres a glue!!")
     await ctx.send(file=discord.File("/home/barndles/Documents/discord-bots/mediafool/glue-pics/"+ pic))
     
-bot.run('MTEyMzA5MTEwNzg2NjIzNDkzMQ.GDMdw9.EW6G15H_lNlUOQCOeKj_fyJ-RMnCTFbNoWDjrU')
+bot.run(token)
